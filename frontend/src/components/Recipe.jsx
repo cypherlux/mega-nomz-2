@@ -1,20 +1,20 @@
 import { Card } from "react-bootstrap";
-import recipes from "../recipes";
+import { Link } from "react-router-dom";
 
 const Recipe = ({ recipe }) => {
   return (
     <Card className="my-3 p-3 rounded">
-        <a href={`/recipes/${recipe._id}`}>
+        <Link to={`/recipes/${recipe._id}`}>
             <Card.Img src={recipe.image} variant="top" />
-        </a>
+        </Link>
 
         <Card.Body>
-            <a href={`/recipes/${recipe._id}`}>
+            <Link to={`/recipes/${recipe._id}`}>
                 <Card.Title as="div">
                     <strong>{recipe.name}</strong>
 
                 </Card.Title>
-            </a>
+            </Link>
             <Card.Text  as="h4">
                 {recipe.description}
             </Card.Text>
