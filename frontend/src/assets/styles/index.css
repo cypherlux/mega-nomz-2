@@ -20,6 +20,7 @@ main {
   padding-left: 0.5rem;
 }
 
+/* This makes the product titles be cut off and adds a "..." to prevent text on more than 1 line */
 .product-title {
   height: 2.5em; /* Set a fixed height */
   overflow: hidden; /* Hide overflow content */

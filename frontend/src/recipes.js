@@ -30,7 +30,7 @@ const recipes = [
         ],
         cuisine: "American",
         mealTime: "ex: breakfast vs. dinner vs. dessert",
-        mealType: "casserole",
+        mealType: "Casserole",
         temperature: "hot",
         bulk: true
     },
@@ -55,7 +55,7 @@ const recipes = [
         ],
         cuisine: "ex: korean, american, mexican",
         mealTime: "snack",
-        mealType: "finger food",
+        mealType: "Finger food",
         temperature: "hot",
         bulk: false
     },
@@ -78,7 +78,7 @@ const recipes = [
         ],
         cuisine: "Thai",
         mealTime: "ex: breakfast vs. dinner vs. dessert",
-        mealType: "stirfry",
+        mealType: "Stirfry",
         temperature: "hot",
         bulk: true
     },
@@ -101,7 +101,7 @@ const recipes = [
         ],
         cuisine: "ex: korean, american, mexican",
         mealTime: "dessert",
-        mealType: "bowl vs. salad vs. stirfry",
+        mealType: "Casserole",
         temperature: "hot vs. cold",
         bulk: false
     },
@@ -124,7 +124,7 @@ const recipes = [
         ],
         cuisine: "ex: korean, american, mexican",
         mealTime: "dessert",
-        mealType: "bowl vs. salad vs. stirfry",
+        mealType: "Dessert",
         temperature: "cold",
         bulk: "is this good to make in bulk?"
     },
@@ -147,10 +147,10 @@ const recipes = [
         ],
         cuisine: "ex: korean, american, mexican",
         mealTime: "ex: breakfast vs. dinner vs. dessert",
-        mealType: "salad",
+        mealType: "Salad",
         temperature: "hot vs. cold",
         bulk: "is this good to make in bulk?"
     }
 ]
 
-export default recipes
+export default recipes;
