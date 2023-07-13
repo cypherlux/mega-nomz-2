@@ -151,6 +151,6 @@ const recipes = [
         temperature: "hot vs. cold",
         bulk: "is this good to make in bulk?"
     }
-]
+];
 
 export default recipes;

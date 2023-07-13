@@ -1,11 +1,24 @@
+import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button} from 'react-bootstrap';
-import recipes from "../recipes";
+// import recipes from "../recipes";
+import axios from 'axios';
 
 const RecipeScreen = () => {
+    const [recipe, setRecipe] = useState({});
+
     const { id: recipeId } = useParams();
-    const recipe = recipes.find((r) => r._id === recipeId );
+    // const recipe = recipes.find((r) => r._id === recipeId );
+
+    useEffect(() => {
+        const fetchRecipe = async () => {
+            const { data } = await axios.get(`/api/recipes/${recipeId}`);
+            setRecipe(data);
+        }
+
+        fetchRecipe();
+    }, [recipeId]);
 
     return (
         <>
