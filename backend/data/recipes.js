@@ -1,6 +1,5 @@
 const recipes = [
     {
-        _id: "1",
         name: "Chicken Broccoli “Rice” Casserole",
         image: "/images/chicken-broccoli-casserole.jpg", 
         description: "A cheesy, comfort-food delight that's versatile to make and perfect for meal-prepping",
@@ -35,7 +34,6 @@ const recipes = [
         bulk: true
     },
     {
-        _id: "2",
         name: "Shishitos with Peanut Dipping Sauce",
         image: "/images/shishitos.jpg",
         description: "Mild, crispy peppers with a spicy soy peanut dipping sauce",
@@ -60,7 +58,6 @@ const recipes = [
         bulk: false
     },
     {
-        _id: "3",
         name: "Thai basil chicken and eggplant",
         image: "/images/thai-chicken-eggplant.jpg",
         description: "This recipe was my eggplant awakening",
@@ -83,7 +80,6 @@ const recipes = [
         bulk: true
     },
     {
-        _id: "4",
         name: "Berry Crisp",
         image: "/images/berry-crisp.jpg",
         description: "Berry medley with a crispy topping",
@@ -106,7 +102,6 @@ const recipes = [
         bulk: false
     },
     {
-        _id: "5",
         name: "Sea Salt Caramel Coconut Ice Cream",
         image: "/images/coconut-cashew-icecream.jpg",
         description: "The easiest, most decadent ice cream that you can make without an ice cream maker",
@@ -129,7 +124,6 @@ const recipes = [
         bulk: "is this good to make in bulk?"
     },
     {
-        _id: "6",
         name: "Crispy Buffalo Chicken Salad",
         image: "/images/buffalo-chicken-salad.jpg",
         description: "Spicy, crispy chicken tossed in a refreshing bed of veggies",
