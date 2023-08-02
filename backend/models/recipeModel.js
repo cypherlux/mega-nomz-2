@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const reviewSchema = mongoose.Schema({
+const reviewSchema = mongoose.Schema(
+    {
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
@@ -36,38 +37,46 @@ const recipeSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    brand: {
-        type: String,
-        required: true,
-    },
-    category: {
-        type: String,
-        required: true,
-    },
     description: {
         type: String,
         required: true,
     },
-    reviews: [reviewSchema],
-    rating: {
-        type: Number,
-        required: true,
-        default: 0,
+    source: {
+      type: String,
+      required: true,
     },
-    numReviews: {
-        type: Number,
+    sourceURL: {
+        type: String,
         required: true,
-        default: 0,
     },
-    price: {
-        type: Number,
+    ingredients: {
+        type: Array,
         required: true,
-        default: 0,
     },
-   countInStock: {
-        type: Number,
+    instructions: {
+        type: Array,
         required: true,
-        default: 0,
+    },
+    cuisine: {
+        type: String,
+        required: true,
+    },
+    mealTime: {
+      type: String,
+      required: true,
+    },
+    mealType: {
+      type: String,
+      required: true,
+    },
+    temperature: {
+      type: String,
+      required: true,
+    },
+    bulk: {
+      type: Boolean,
+      required: true,
+      default: false,
     }
 }, {
     timestamps: true,
@@ -76,3 +85,5 @@ const recipeSchema = new mongoose.Schema({
 const Recipe = mongoose.model("Recipe", recipeSchema);
 
 export default Recipe;
+
+

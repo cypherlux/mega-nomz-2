@@ -121,7 +121,7 @@ const recipes = [
         mealTime: "dessert",
         mealType: "Dessert",
         temperature: "cold",
-        bulk: "is this good to make in bulk?"
+        bulk: true,
     },
     {
         name: "Crispy Buffalo Chicken Salad",
@@ -143,7 +143,7 @@ const recipes = [
         mealTime: "ex: breakfast vs. dinner vs. dessert",
         mealType: "Salad",
         temperature: "hot vs. cold",
-        bulk: "is this good to make in bulk?"
+        bulk: false,
     }
 ];
 
