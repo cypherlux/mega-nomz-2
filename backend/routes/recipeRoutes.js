@@ -17,8 +17,10 @@ router.get(
       const recipe = await Recipe.findById(req.params.id);
       if (recipe) {
         return res.json(recipe);
+      } else {
+        res.status(404);
+        throw new Error('Resource not found');
       }
-      res.status(404).json({ message: 'Product not found' });
     })
   );
   
