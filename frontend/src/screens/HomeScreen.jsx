@@ -1,30 +1,28 @@
-import { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import axios from 'axios';
 import Recipe from '../components/Recipe';
+import { useGetRecipesQuery } from '../slices/recipeSlice';
 
 const HomeScreen = () => {
-  const [recipes, setRecipes] = useState([]);
-
-  useEffect(() => {
-    const fetchRecipes = async () => {
-      const { data } = await axios.get('/api/recipes');
-      setRecipes(data);
-    };
-
-    fetchRecipes();
-  }, [])
+  const { data: recipes, isLoading, error } = useGetRecipesQuery();
 
   return (
     <>
-        <h1>Latest Recipes</h1>
-        <Row>
-            { recipes.map((recipe) => (
-                <Col key={recipe._id} sm={12} md={6} lg={4} xl={3}>
-                    <Recipe recipe={recipe} />
-                </Col>
-            )) }
-        </Row>
+      {isLoading ? (
+        <h2>Loading...</h2>
+      ) : error ? (
+        <div>{error?.data?.message || error.error}</div>) : (
+        <>
+          <h1>All Recipes</h1>
+          <Row>
+              { recipes.map((recipe) => (
+                  <Col key={recipe._id} sm={12} md={6} lg={4} xl={3}>
+                      <Recipe recipe={recipe} />
+                  </Col>
+              )) }
+          </Row>
+      </>) }
+
+        
     </>
   )
 }
