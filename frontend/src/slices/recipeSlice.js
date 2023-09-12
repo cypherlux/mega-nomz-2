@@ -8,9 +8,17 @@ export const recipeSlice = apiSlice.injectEndpoints({
                 url: RECIPES_URL,
             }),
             keepUnusedDataFor: 5
-        })
+        }),
+        getRecipeDetails: builder.query({
+            query: (recipeId) => ({
+                url: `${RECIPES_URL}/${recipeId}`,
+            }),
+            keepUnusedDataFor: 5
+        }),
     }),
 });
+
+
 
 
 export const { useGetRecipesQuery, useGetRecipeDetailsQuery } = recipeSlice;
